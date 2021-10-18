@@ -19,7 +19,7 @@ class loginContr extends Login{
     exit();    
     }
     
-     $this->setUser($this->uid, $this ->pwd ,$this->email);
+     $this->getUser($this->uid, $this ->pwd ,$this->email);
     
     }
     
@@ -77,16 +77,7 @@ class loginContr extends Login{
     }
     
     
-    private function uidTakenCheck(){
-    if (!$this->checkUser($this->uid, $this->email)) {
-    $result = false;    
-    }
-    else {
-    $result = true;
     
-    }
-    return $result;    
-    }
     
     }
     
